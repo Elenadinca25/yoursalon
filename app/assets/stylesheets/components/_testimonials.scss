@@ -5,6 +5,10 @@
     text-align: center;
 }
 
+.testimonials h1 {
+    font-size: 30px;
+}
+
 .testimonial-col {
     flex-basis: 48%;
     border-radius: 10px;
@@ -22,6 +26,7 @@
     margin-left: 5px;
     margin-right: 50px;
     border-radius: 50%;
+    border: 1px solid white;
 }
 
 .testimonial-col p {
