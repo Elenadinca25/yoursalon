@@ -1,0 +1,6 @@
+<% @appointments.each do |appointment| %>
+
+<%= link_to appointment.user.name, appointment_path(appointment.id) %><br>
+<h2><%= appointment.date.strftime("%d/%m/%Y - %k:%M") %></h2>
+
+<% end %>

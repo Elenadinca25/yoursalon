@@ -1,0 +1,21 @@
+
+<% if @appointment.errors.full_messages.length > 0 %>
+  <h2><%= pluralize(@appointment.errors.full_messages.length , "error") %> prohibited this appointment from being created:</h2>
+  <ul>
+    <% @appointment.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with model: @appointment, url: make_appointment_path do |f| %>
+        
+    Style: <%= f.collection_select(:hairstyle_id,  @stylist.hairstyles, :id, :style) %><br>
+    <%= fields_for :user do |user| %> 
+    <%= user.label :name %>
+    <%= user.text_field :name %><br>
+    <% end %>
+    Select An Appointment Date: <%= f.datetime_select :time%><br>
+    
+    <%= f.submit %>
+<% end %>

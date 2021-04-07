@@ -1,0 +1,18 @@
+<h1> Name: <%= @stylist.name %></h1>
+<h2> Years of experience: <%= @stylist.years_of_experience %> years </h2>
+<h2> Occupation: <%= @stylist.occupation %></h2>
+
+
+<ul>
+    <% @hairstyles.each do |hairstyle| %> 
+        <li>
+            <h2><%= hairstyle.style %></h2>
+            <h3>Price: £<%= hairstyle.price %></h3>
+        </li>
+    <% end %>
+</ul>
+
+<%= render 'appointments/form', :appointment => @appointment, :stylist => @stylist %>
+
+<br>
+<button><%= link_to  "Back", stylists_path %></button>

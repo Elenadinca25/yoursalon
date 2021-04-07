@@ -1,0 +1,96 @@
+.banner {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("salon.jpg");
+    background-size: cover;
+    background-position: center;
+}
+    
+
+.text-box {
+        width: 80%;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+.text-box h1 {
+        color: white;
+        font-weight: bold;
+        font-size: 50px;
+    }
+
+.text-box p {
+        color: white;
+        opacity: 0.8;
+        font-size: 30px;
+        font-weight: lighter;
+        margin-bottom: 30px;
+    }
+
+.hero-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 12px 44px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+    }
+
+.hero-btn:hover {
+        border: 1px solid #f44336;
+        background: #f44336;
+        transition: 1s;
+}
+
+
+@media(max-width: 700px){
+    .text-box h1 {
+        font-size: 35px;
+       
+    }
+
+    .text-box p {
+        font-size: 17px; 
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0px;
+        right: -200px;
+        text-align: left !important;
+        z-index: 2;
+        transition: 1s;
+    }
+    
+    .navbar-nav .fa {
+        display: block !important;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+    
+
+    .navbar-lewagon .navbar-brand img {
+        display: none;
+    }
+}

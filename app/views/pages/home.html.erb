@@ -1,2 +1,180 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% content_for(:navbar_class, "navbar-home") %>
+<% content_for(:footer_class, "footer-home") %>
+
+<div class="banner" id="home">
+  <div class="text-box"> 
+    <h1>Ely's</h1>
+    <p>Ely's beauty salon has been part of London’s hair scene since 2015,
+     and we wanted to give you an illustrative snapshot into the story that we are
+     so proud of.</p>
+     <%= link_to  "Our Stylists", stylists_path, class: "hero-btn" %>
+  </div>
+</div>
+
+<div class="about-us-container">
+    <div class="aboutUs" id="about-us">
+        <h2>About Us</h2>
+
+         <div class="row">
+            <div class="aboutUs-col">
+                <p><em>YourBeautySalon</em> has been part of London’s hair scene since 2015, 
+                    and we wanted to give you an illustrative snapshot into the story that we are so proud of. 
+                    Our philosophy for nurturing and developing raw talent which we began at our first salon in Sydney Street. 
+                    We opened one of the most celebrated names in hair and beauty, Elena & Chuk’s is proud of its heritage 
+                    and stellar team, many of which have been with us for over 5 years. We would like to thank you, 
+                    as well as the loyal press, for supporting our creative journey to becoming one of the 
+                    best styling teams in the capital.
+                </p>
+                <p> 
+                    The new flagship is our vision of what tomorrow's salon will look like.
+                    Imagine innovative design, state-of-the-art technology and modern menus trailblazing,
+                    with a botanical-inspired philosophy which stays true to our classic, luxury roots. 
+                    So while you can plug into your personalised iPad programme, read a digital magazine, 
+                    check emails, book appointments. Our plant-based menu including Hari's Herb Bar, 
+                    Organic Colour Counter and natural magic washes, combined with our expertise, 
+                    will simply deliver on great hair.
+                </p>        
+            </div>
+        </div>
+
+
+        <div class="stylists">
+            <h2>Meet our stylists</h2>
+
+            <div class="row">
+                <div class="stylists-col">
+                    <img src="https://media.allure.com/photos/5f08c2f9d50e0f000887a4be/3:4/w_1748,h_2331,c_limit/is-it-safe-to-go-to-hair-salon-covid-19-pandemic-lede.jpg">
+                    <div class="layer">
+                        <h3>Lery</h3>
+                    </div>
+                </div>
+
+                <div class="stylists-col">
+                    <img src="https://media.allure.com/photos/5f08c2f9d50e0f000887a4be/3:4/w_1748,h_2331,c_limit/is-it-safe-to-go-to-hair-salon-covid-19-pandemic-lede.jpg">
+                    <div class="layer">
+                        <h3>Adao</h3>
+                    </div>
+                </div>
+
+                <div class="stylists-col">
+                    <img src="https://media.allure.com/photos/5f08c2f9d50e0f000887a4be/3:4/w_1748,h_2331,c_limit/is-it-safe-to-go-to-hair-salon-covid-19-pandemic-lede.jpg">
+                    <div class="layer">
+                        <h3>Dorothy</h3>
+                    </div>
+                </div>
+               
+                <div class="stylists-col">
+                    <img src="https://media.allure.com/photos/5f08c2f9d50e0f000887a4be/3:4/w_1748,h_2331,c_limit/is-it-safe-to-go-to-hair-salon-covid-19-pandemic-lede.jpg">
+                    <div class="layer">
+                        <h3>Mina</h3>
+                    </div>
+                </div>
+
+                <div class="stylists-col">
+                    <img src="https://media.allure.com/photos/5f08c2f9d50e0f000887a4be/3:4/w_1748,h_2331,c_limit/is-it-safe-to-go-to-hair-salon-covid-19-pandemic-lede.jpg">
+                    <div class="layer">
+                        <h3>July</h3>
+                    </div>
+                </div>
+
+                <div class="stylists-col">
+                    <img src="https://media.allure.com/photos/5f08c2f9d50e0f000887a4be/3:4/w_1748,h_2331,c_limit/is-it-safe-to-go-to-hair-salon-covid-19-pandemic-lede.jpg">
+                    <div class="layer">
+                        <h3>Gbenga</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%= link_to 'Booked Appointments', appointments_path , class: "hero-btn"%> 
+    </div>
+
+
+    <div class="facilities">
+        <h1>Our services</h1>
+        <p>Please have a look at out facilities.We hope you will love our stylists.</p>
+
+        <div class=row>
+            <div class="facilities-col">
+                <img src="https://i.etsystatic.com/12675416/r/il/6309d8/1949278176/il_794xN.1949278176_pa4f.jpg">
+                <h3>Dreads</h3>
+                <p>GRAY DREADS OMBRE. synthetic dreadlocks extensions - Single ended se or Double Ended de Synthetic dreads, ombre black to white and grey</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="https://haircutinspiration.com/wp-content/uploads/Tough-yet-Classy-Shiny-Buzz-Cut.jpg">
+                <h3>Buzz Cut</h3>
+                <p>A buzz cut can be loosely defined as any hair style which can be performed with only the use of clippers and no scissors. </p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="https://i.pinimg.com/originals/97/35/41/9735411d2b463ef9735f4913267a69b4.jpg">
+                <h3>Fade</h3>
+                <p>A fade is the style for you. Go for a blended hairstyle if you want to leave some length on the top, sides, and back. Most men's haircuts involve some sort of taper, and if you want a clean, thick, classic cut, a taper is the way to go.</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="https://i.pinimg.com/736x/9a/33/88/9a3388dfdf55f74e01148bac883f8836.jpg">
+                <h3>High Top</h3>
+                <p>The high top fade haircut may have peaked in the late 1980s and early 1990s but it is back again and here to stay. The cut has come a long way from Kid of Kid 'n Play's unforgettable look. Any way you wear it, this is a very cool fade haircut for men.</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="https://stylecaster.com/wp-content/uploads/2016/05/hpmiranda_kerr11.jpg?w=320&h=360&crop=1">
+                <h3>Side Parting</h3>
+                <p>To create a side part, hold the tip of a comb down towards the scalp. ... Some look better with a diagonal direction to offset the side part, while others will pull hair straight back or down to the other side.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------- testimonials ------------------>
+
+    <div class="testimonials">
+        <h1>What Our Clients Says</h1>
+        <p>Please have a look at our reviews.We hope you will love our salon.</p>
+
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="https://avatars.githubusercontent.com/u/55464617?v=4">
+                <div>
+                    <p>Amazing salon. I love the style of this salon. 
+                    The stylists are so lovely and they are offering
+                    you free drinks and coffee.
+                    </p>
+                    <h3>Christine Berley</h3>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+             <div class="testimonial-col">
+                <img src="data:image/jpeg;base64,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">
+                <div>
+                    <p>Amazing salon. I love the style of this salon. 
+                    The stylists are so lovely and they are offering
+                    you free drinks and coffee.
+                    </p>
+                    <h3>David Grey</h3>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------Call to action -------------------->
+    <div class="cta">
+        <h1>Are you curios to find out more <br> about our salon and stylists?</h1>
+         <%= link_to "Contact Us", salons_url, class: "hero-btn"  %>
+    </div>
+
+
+   
+
+

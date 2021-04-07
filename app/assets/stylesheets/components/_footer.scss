@@ -1,0 +1,47 @@
+.footer {
+  width: 100%; 
+  text-align: center;
+  padding: 30px 40px;
+}
+
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fa {
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    font-size: 22px;
+    transition: 0.2s;
+}
+
+.icons .fa:hover {
+    color: #83150d; 
+}
+
+.fa-copyright {
+    color: #f44336;
+}
+
+i:hover::before {
+    transform: rotate(360deg);
+}
+
+i:before {
+    display: inline-block;
+    /* mandatory to be able to use transform */
+    transition: 1s all;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.3);
+    }
+}
