@@ -1,0 +1,136 @@
+.about-us-container {
+    background: #f9f3f3;
+}
+
+.aboutUs {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.aboutUs h2 {
+    font-size: 32px !important;
+    font-weight: 600;
+}
+
+.aboutUs p {
+    color: #777;
+    font-size: 16px !important;
+    font-weight: 300;
+    line-height: 25px;
+    padding: 10px;
+}
+
+
+.row {
+   margin-top: 5%; 
+   display: flex;
+   justify-content: space-between;
+}
+
+
+.aboutUs-col {
+    flex-basis: 100%;
+    background: #f3ecece6;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 25px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+
+.aboutUs-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+// our stylits
+.stylists {
+    // width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.stylists h2 {
+    font-size: 25px !important;
+}
+
+.stylists-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stylists-col img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+
+@media(max-width: 700px){
+    .row {
+        flex-direction: column;
+    }
+    
+    .aboutUs p {
+        color: grey;
+        font-size: 19px !important;
+        font-weight: 300;
+        line-height: 25px;
+        padding: 10px;
+    }
+
+    .aboutUs h2 {
+        font-size: 36px !important;
+        font-weight: 600;
+    }
+
+    .stylists h2 {
+        font-size: 32px !important;
+        padding-bottom: 10px;
+    }
+
+
+}
+
+

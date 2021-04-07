@@ -1,0 +1,113 @@
+footer {
+    // background-color: hsla(195, 80%, 98%, 0.811);
+    // color: grey;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+    margin-top: 50px;
+    bottom: 0;
+}
+
+
+.footer-container {
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 15px #2c2828;
+    border-radius: 10px;
+    /* margin-top: 20px; */
+    background-color: whitesmoke !important;
+    margin-bottom: 20px;
+}
+
+
+.form-group {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #0a0a0a68;
+    margin-top: 5px;
+}
+
+textarea {
+    resize: vertical;
+    height: 50px;
+}
+
+#contact-us h2 {
+    font-size: 32px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+
+#status {
+    width: 70%;
+    max-width: 500px;
+    text-align: center;
+    padding: 8px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#status.success {
+    background-color: rgb(211, 250, 153);
+    animation: status 4s ease forwards;
+}
+
+#status.error {
+    background-color: rgb(250, 129, 92);
+    color: white;
+    animation: status 4s ease forwards;
+}
+
+@keyframes status {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    90% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+  
+}
+
+
+
+
+// @media(max-width: 700px){
+//     footer {
+//         background-color: #f44336 !important;
+//         color: white;
+//         text-align: center;
+//         padding: 20px;
+//         flex-direction: column;
+//         margin-top: 0;
+//     }
+    
+//     .footer-container {
+//         width: 70%;
+//         max-width: 500px;
+//         margin: 0 auto;
+//         padding: 20px;
+//         box-shadow: 0px 0px 15px white;
+//         border-radius: 10px;
+//         /* margin-top: 20px; */
+//         background-color: hsl(4, 83%, 58%) !important;
+//         margin-bottom: 20px;
+//     }
+    
+// }

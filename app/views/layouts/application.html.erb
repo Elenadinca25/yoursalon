@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BeautySalon</title>
+    <title>YourBeautySalon</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,6 +9,10 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -16,5 +20,46 @@
     <%= render 'shared/flashes' %>
 
     <%= yield %>
+    <%= render 'shared/footer' %>
+
+
+
+
+<!-----------JavaScript for Toggle Menu------------>
+<script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+
+
+        var form = document.getElementById("my-form");
+            
+        async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+        }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+        });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+
   </body>
 </html>

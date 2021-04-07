@@ -10,10 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_05_174151) do
+ActiveRecord::Schema.define(version: 2021_04_06_112747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "appointments", force: :cascade do |t|
+    t.datetime "date"
+    t.bigint "user_id", null: false
+    t.bigint "hairstyle_id", null: false
+    t.bigint "salon_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["hairstyle_id"], name: "index_appointments_on_hairstyle_id"
+    t.index ["salon_id"], name: "index_appointments_on_salon_id"
+    t.index ["user_id"], name: "index_appointments_on_user_id"
+  end
+
+  create_table "hairstyles", force: :cascade do |t|
+    t.string "style"
+    t.integer "price"
+    t.bigint "stylist_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["stylist_id"], name: "index_hairstyles_on_stylist_id"
+  end
+
+  create_table "salons", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "stylists", force: :cascade do |t|
+    t.string "name"
+    t.integer "years_of_experience"
+    t.string "occupation"
+    t.bigint "salon_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["salon_id"], name: "index_stylists_on_salon_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -21,10 +59,16 @@ ActiveRecord::Schema.define(version: 2021_04_05_174151) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "appointments", "hairstyles"
+  add_foreign_key "appointments", "salons"
+  add_foreign_key "appointments", "users"
+  add_foreign_key "hairstyles", "stylists"
+  add_foreign_key "stylists", "salons"
 end
