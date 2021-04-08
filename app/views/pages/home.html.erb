@@ -42,7 +42,7 @@
 
             <div class="row">
                 <div class="stylists-col">
-                    <%# <%= image_tag "Dorothy.jpg"%> 
+                    <%= image_tag("Dorothy.jpg") %>
                     <div class="layer">
                         <h3>Lery</h3>
                     </div>
@@ -198,51 +198,12 @@
 
     <!--------------Call to action -------------------->
     <div class="cta">
-        <h1>Make reservations and find out more details about <br>
+        <h1>Make reservations or find out more details about <br>
            our salon by just filling out this form.
         </h1>
         <%= link_to "Contact Us", salons_url, class: "hero-btn"  %>
     </div>
 
-
-
-   
-<!-----------JavaScript for Toggle Menu------------>
-    <script>
-        var navLinks = document.getElementById("navLinks");
-
-        function showMenu() {
-            navLinks.style.right = "0";
-        }
-
-        function hideMenu() {
-            navLinks.style.right = "-200px";
-        }
-
-
-
-
-        var form = document.getElementById("my-form");
-            
-        async function handleSubmit(event) {
-        event.preventDefault();
-        var status = document.getElementById("status");
-        var data = new FormData(event.target);
-        fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            status.innerHTML = "Thanks for your submission!";
-            form.reset()
-        }).catch(error => {
-            status.innerHTML = "Oops! There was a problem submitting your form"
-        });
-        }
-        form.addEventListener("submit", handleSubmit)
-    </script>
 
 
 
