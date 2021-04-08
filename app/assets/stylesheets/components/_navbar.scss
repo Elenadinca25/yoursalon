@@ -3,7 +3,11 @@
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+.navbar-lewagon .nav-links {
   flex-grow: 0;
 }
 
@@ -17,7 +21,7 @@
   position: static;
   float: none;
   background-color: transparent;
-  // color: white !important;
+  color: white !important;
 }
 
 .navbar-home {
