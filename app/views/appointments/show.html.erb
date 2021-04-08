@@ -1,5 +1,10 @@
-<h2><%= @appointment.user.name %></h2>
+
+<h2><%= @appointment.customer.name %></h2>
 <h2><%= @appointment.date.strftime("%d/%m/%Y - %k:%M") %></h2>
 <h2><%= @appointments %></h2>
-<button> <%= link_to 'Delete', appointment_path(@appointment), method: :delete %><br> </button>
-<button> <%= link_to 'Home', stylists_path %><br> </button>
+
+<%= link_to 'Back', appointments_path, class: "hero-btn-1" %>
+<%= link_to 'Delete', appointment_path(@appointment), class: "hero-btn-1", method: :delete %>
+
+<%# <%= link_to 'Home', stylists_path, class: "hero-btn-1" %>
+

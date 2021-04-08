@@ -1,16 +1,13 @@
-<h2>Here is a list with our stylists:</h2>
-
-<ul>
-    <% @stylists.each do |stylist| %>
-  
-    <li><%= link_to stylist.name, stylist_path(stylist) %></li>
- 
-  <% end %>
-</ul>
-<br>
-<button><%= link_to 'Home page', root_path %><br> </button>
-<button><%= link_to 'Booked Appointments', appointments_path %><br> </button>  
-<br>
-<br>
-<img src="https://www.wigantoday.net/sttms.blob.core.windows.net/images/QVNIMTEzNTkyNzky.jpg?crop=982:524,smart&width=640.jpg">
-
+<div class="container-stylists">
+  <div class="banner-stylists" id="banner-stylists">
+    <div class="text-box-stylists"> 
+      <h1>Book your favourite <br> stylist</h1> 
+      <ul>
+        <% @stylists.each do |stylist| %>
+          <li><%= link_to stylist.name, stylist_path(stylist) %></li>
+        <% end %>
+      </ul>
+      <%# <%= link_to  "Our Stylists", stylists_path, class: "hero-btn" %> 
+    </div>
+  </div>
+<%# </div> %>

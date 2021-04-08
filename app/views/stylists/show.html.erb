@@ -1,18 +1,33 @@
-<h1> Name: <%= @stylist.name %></h1>
-<h2> Years of experience: <%= @stylist.years_of_experience %> years </h2>
-<h2> Occupation: <%= @stylist.occupation %></h2>
+<div class="stylist-details-container">
+    <div class="stylist-details">
+        <%# <h2>Stylist details</h2> %>
+        <div class="row">
+            <div class="stylists-col">
+                <h1><%= @stylist.name %></h1>
+                <h1> Years of experience: <%= @stylist.years_of_experience %></h1>
+                <h1> Occupation: <%= @stylist.occupation %></h1>
+            </div>
+        </div>
+    
 
+    <div class="stylist-details-price-and-style">
+        <% @hairstyles.each do |hairstyle| %>
+        <ol> 
+            <li>
+                <h2><%= hairstyle.style %></h2>
+                <h3>Price: £<%= hairstyle.price %></h3>
+            </li>
+            </ol>
+        <% end %>
+    </div>
 
-<ul>
-    <% @hairstyles.each do |hairstyle| %> 
-        <li>
-            <h2><%= hairstyle.style %></h2>
-            <h3>Price: £<%= hairstyle.price %></h3>
-        </li>
-    <% end %>
-</ul>
+    <div class="stylist-appointment-container">
+        <div class="stylist-appointment-form">
+            <%= render 'appointments/form', :appointment => @appointment, :stylist => @stylist %>
+        </div>
+    </div>
 
-<%= render 'appointments/form', :appointment => @appointment, :stylist => @stylist %>
+<%= link_to  "Back", stylists_path,  class: "hero-btn-1" %>
+<%= link_to 'Booked Appointments', appointments_path ,  class: "hero-btn-1"%>
 
-<br>
-<button><%= link_to  "Back", stylists_path %></button>
+</div>

@@ -1,4 +1,4 @@
 class Hairstyle < ApplicationRecord
-  belongs_to :stylist
   has_many :appointments
+  belongs_to :stylist
 end
