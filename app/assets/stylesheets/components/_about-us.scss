@@ -13,10 +13,13 @@
 .aboutUs h2 {
     font-size: 32px !important;
     font-weight: 600;
+    color:black;
+    opacity: 0.6;
 }
 
 .aboutUs p {
-    color: #777;
+    color:black;
+    opacity: 0.6;
     font-size: 16px !important;
     font-weight: 300;
     line-height: 25px;
@@ -54,8 +57,16 @@
     padding-top: 50px;
 }
 
+.stylists h1 {
+    font-size: 25px !important;
+    color:black !important;
+    opacity: 0.6;
+}
+
 .stylists h2 {
     font-size: 25px !important;
+    color:black !important;
+    opacity: 0.6;
 }
 
 .stylists-col {
@@ -109,7 +120,9 @@
     margin-top: 30px;
     display: inline-block;
     text-decoration: none;
-    color: grey !important;
+    // color: grey !important;
+    color:black;
+    opacity: 0.6;
     border: 1px solid grey;
     padding: 12px 44px;
     background: transparent;

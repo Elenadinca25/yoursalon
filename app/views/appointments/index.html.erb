@@ -5,7 +5,7 @@
             <% @appointments.each do |appointment| %>
                 <div class="appoiments-col-2">
                     <h1><%= link_to appointment.customer.name.capitalize, appointment_path(appointment.id) %></h1><br>
-                    <h2><%= appointment.date.strftime("%d/%m/%Y - %k:%M") %></h2>
+                    <h2><%= link_to appointment.date.strftime("%d/%m/%Y - %k:%M"), appointment_path(appointment.id) %></h2>
                 </div>
             <% end %>
         </div>
