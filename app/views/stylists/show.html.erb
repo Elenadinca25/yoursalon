@@ -2,7 +2,7 @@
     <div class="stylist-details">
         <%# <h2>Stylist details</h2> %>
         <div class="row">
-            <div class="stylists-col">
+            <div class="stylists-col-1">
                 <h1><%= @stylist.name %></h1>
                 <h1> Years of experience: <%= @stylist.years_of_experience %></h1>
                 <h1> Occupation: <%= @stylist.occupation %></h1>
@@ -26,6 +26,7 @@
             <%= render 'appointments/form', :appointment => @appointment, :stylist => @stylist %>
         </div>
     </div>
+
 
 <%= link_to  "Back", stylists_path,  class: "hero-btn-1" %>
 <%= link_to 'Booked Appointments', appointments_path ,  class: "hero-btn-1"%>

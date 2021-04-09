@@ -1,10 +1,17 @@
+<div class="appoiments-details-container">
+ <div class="appoiments-details">
+        <div class="row">
+            <div class="appoiments-col-2">  
+                <h1><%= @appointment.customer.name %></h1>
+                <h2><%= @appointment.date.strftime("%d/%m/%Y - %k:%M") %></h2>
+                <h2><%= @appointments %></h2>     
+            </div>     
+        </div>
 
-<h2><%= @appointment.customer.name %></h2>
-<h2><%= @appointment.date.strftime("%d/%m/%Y - %k:%M") %></h2>
-<h2><%= @appointments %></h2>
+    <%= link_to 'Back', appointments_path, class: "hero-btn-1" %>
+    <%= link_to 'Delete', appointment_path(@appointment), class: "hero-btn-1", method: :delete %>
+   
+</div>
 
-<%= link_to 'Back', appointments_path, class: "hero-btn-1" %>
-<%= link_to 'Delete', appointment_path(@appointment), class: "hero-btn-1", method: :delete %>
 
-<%# <%= link_to 'Home', stylists_path, class: "hero-btn-1" %>
 

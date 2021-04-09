@@ -12,18 +12,8 @@
 }
 
 
-
-.row {
-   margin-top: 5%; 
-   display: flex;
-   justify-content: space-between;
-}
-
-
-.stylists-col {
+.stylists-col-1 {
     flex-basis: 100%;
-    background: rgb(103,113,103);
-    border-radius: 10px;
     margin-bottom: 5%;
     padding: 25px 12px;
     box-sizing: border-box;
@@ -31,7 +21,7 @@
     border-radius: 5px;
 }
 
-.stylists-col h1 {
+.stylists-col-1 h1 {
     font-size: 32px !important;
     font-weight: 600;
     color: white;
@@ -39,7 +29,7 @@
 }
 
 
-.stylists-col:hover {
+.stylists-col-1:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.432);
 }
 
@@ -47,7 +37,6 @@
 
 
 .stylist-details-price-and-style ol {
-    // background: #606f60;
     box-shadow: 0px 0px 15px #2c2828;
     padding: 20px;
     border-radius: 5px;
@@ -56,33 +45,41 @@
 .stylist-details-price-and-style ol li {
     background: rgb(103,113,103);
     padding: 5px;
-    margin-left: 35px;
+    // margin-left: 35px;
     list-style: none;
     color: white;
     opacity: 0.5;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #2c2828;
 }
 
-
-form {
+.stylist-appointment-container {
     color: whitesmoke;
     opacity: 0.6;
-    // max-width: 700px;
-    height: 240px;
+    height: 200px;
     margin: 0 auto;
-    padding-top: 30px !important;
+    padding-top: 35px !important;
     box-shadow: 0px 0px 15px #2c2828;
     border-radius: 5px;
     background-color: rgb(103,113,103) !important;
-    // margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
 }
 
-input {
-    margin-top: 10px;
-    transition: 0.2s;
+.stylist-appointment-form {
+    width: 100%;
+    font-size: 18px;
 }
 
-input:hover {
-    background-color: #f44336;
-    color: whitesmoke;
+input {
+    margin-top: 5px;
+}
+
+
+
+
+@media(max-width: 700px){
+    .stylist-appointment-container {
+        height: 250px;
+    }
 }
