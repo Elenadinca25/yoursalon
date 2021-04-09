@@ -15,6 +15,7 @@ class AppointmentsController < ApplicationController
         date = Time.new(params[:appointment]["time(1i)"].to_i, params[:appointment]["time(2i)"].to_i, params[:appointment]["time(3i)"].to_i, params[:appointment]["time(4i)"].to_i, params[:appointment]["time(5i)"].to_i)
         appointment = Appointment.create(date: date, customer_id: customer.id, hairstyle_id: hairstyle.id, salon_id: salon.id)
         if appointment.valid?
+            flash[:success] = 'Thank you for your appointment!'
             redirect_to appointment_path(appointment)
         else
             flash[:errors] = appointment.errors.full_messages

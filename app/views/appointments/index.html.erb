@@ -1,14 +1,18 @@
+
 <div class="appoiments-details-container">
- <div class="appoiments-details">
-        <%# <h2>Stylist details</h2> %>
-        <div class="row">
-            <% @appointments.each do |appointment| %>
-                <div class="appoiments-col-2">
-                    <h1><%= link_to appointment.customer.name.capitalize, appointment_path(appointment.id) %></h1><br>
-                    <h2><%= link_to appointment.date.strftime("%d/%m/%Y - %k:%M"), appointment_path(appointment.id) %></h2>
-                </div>
-            <% end %>
-        </div>
+<div class="hair-salons-img">
+        <%= image_tag("salon3.jpg")%>
+    <div>
+    <div class="appoiments-details">
+            <%# <h2>Stylist details</h2> %>
+            <div class="row">
+                <% @appointments.each do |appointment| %>
+                    <div class="appoiments-col-2">
+                        <h1><%= link_to appointment.customer.name.capitalize, appointment_path(appointment.id) %></h1><br>
+                        <h2><%= link_to appointment.date.strftime("%d/%m/%Y - %k:%M"), appointment_path(appointment.id) %></h2>
+                    </div>
+                <% end %>
+            </div>
 
     <div class="space-button">
         <%= link_to  "Back", root_path,  class: "hero-btn-1" %>

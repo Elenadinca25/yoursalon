@@ -2,6 +2,34 @@
 //     background: rgb(103,113,103);  
 // }
 
+.stylist-container {
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), image-url("salon-image.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 80px 0;
+    object-fit: cover;
+}
+
+.stylist-container h1 {
+    color: #fff;
+    opacity: 0.6;
+    margin-bottom: 25px;
+    font-size: 45px;
+    padding: 0;
+}
+
+.stylist-container h2 {
+    color: #fff;
+    opacity: 0.6;
+    margin-bottom: 20px;
+    font-size: 32px;
+    padding: 0;
+}
+
+
 
 .stylist-details {
     width: 80%;

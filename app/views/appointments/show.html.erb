@@ -1,8 +1,11 @@
 <div class="appoiments-details-container">
+<div class="hair-salons-img">
+        <%= image_tag("hair-salons-img.jpg")%>
+    <div>
  <div class="appoiments-details">
         <div class="row">
             <div class="appoiments-col-2">  
-                <h1><%= @appointment.customer.name %></h1>
+                <h1><%= @appointment.customer.name.capitalize %></h1>
                 <h2><%= @appointment.date.strftime("%d/%m/%Y - %k:%M") %></h2>
                 <h2><%= @appointments %></h2>     
             </div>     
